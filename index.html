@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic-Tac-Toe: The Squares Showdown</title>
+  <meta name="theme-color" content="#00bcd4">
+  <meta name="description" content="A colorful, fun Tic-Tac-Toe game with themes, dark mode, and cool effects!">
+  <link rel="icon" href="https://img.icons8.com/emoji/48/tic-tac-toe-emoji.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tic-Tac-Toe: The Squares Showdown 🎝️</h1>
+  <select id="themeSelector">
+    <option value="default">Default</option>
+    <option value="neon">Neon</option>
+    <option value="retro">Retro</option>
+  </select>
+  <button id="darkModeToggle">🌙 Dark Mode</button>
+  <div id="scoreboard">
+    <span>😸 X: <span id="scoreX">0</span></span>
+    <span>😼 O: <span id="scoreO">0</span></span>
+  </div>
+  <div id="matchesPlayed">🧾 Matches Played: <span id="matchCount">0</span></div>
+  <div id="message">Player 😸 X's Turn</div>
+  <div id="timer">⏳ Timer: <span id="countdown">15</span>s</div>
+  <div id="gameBoard"></div>
+  <button id="resetBtn">🔄 Reset</button>
+  <div id="gameOverScreen">
+    <div id="gameOverMessage"></div>
+    <button onclick="initGame()">Play Again 🔁</button>
+  </div>
+  <canvas class="confetti" id="confettiCanvas"></canvas>
+  <audio id="clickSound" src="https://www.fesliyanstudios.com/play-mp3/6675"></audio>
+  <audio id="winSound" src="https://www.fesliyanstudios.com/play-mp3/6715"></audio>
+  <audio id="drawSound" src="https://www.fesliyanstudios.com/play-mp3/6795"></audio>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
